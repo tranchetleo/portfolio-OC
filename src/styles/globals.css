@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@import "./loading.css";
+@source inline("bg-foreground/{0..100}");
+@source inline("bg-background/{0..100}");
+@source inline("dark:bg-background/{0..100}");
+@source inline("dark:bg-foreground/{0..100}");
+@source inline("dark:text-foreground");
+@source inline("dark:text-background");
+@source inline("h-{0..100}");
+@source inline("p-{0..100}");
+@source inline("px-{0..100}");
+@source inline("py-{0..100}");
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --truebase: #f3f3f3;
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #0070f3;
+  --secondary: #9a00f3;
+}
+
+@theme inline {
+  --color-truebase: var(--truebase);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --truebase: #171717;
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --primary: #3e8de7;
+    --secondary: #ab4fe0;
+  }
+}
+
+body {
+  background: var(--truebase);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}

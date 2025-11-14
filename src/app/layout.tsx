@@ -49,7 +49,7 @@ export default function RootLayout({
               debug: process.env.NODE_ENV === "development",
             }}
           >
-            <Navbar logo="/logo_full.webp" opacity={80} />
+            <Navbar logo="/logo_full.webp" opacity={80} underline />
             {children}
             <Footer />
           </TrackingProvider>

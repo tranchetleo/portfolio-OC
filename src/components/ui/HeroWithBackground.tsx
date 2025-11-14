@@ -65,7 +65,7 @@ export function HeroWithBackground({
       />
       {/* Content */}
       <div className="relative z-20 max-w-4xl">
-        <h1 className="text-4xl md:text-6xl font-extrabold">{title}</h1>
+        <h1 className="text-4xl md:text-5xl font-extrabold">{title}</h1>
         {subtitle && <p className="mt-4 text-lg md:text-xl">{subtitle}</p>}
         {ctaLabel && (
           <Button

@@ -58,17 +58,16 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <HeroWithBackground
           sectionId="hero-section"
-          title="Votre site web professionnel, sans compromis"
-          subtitle="Des solutions web sur mesure pour TPE, PME, artisans et indépendants à Nantes. Alliant design responsive, optimisation SEO et performance pour une présence en ligne efficace et professionnelle."
+          title="Léo Tranchet, développeur web spécialisé en interfaces modernes et performantes."
+          subtitle="Je conçois et développe des applications web rapides, accessibles et centrées sur l’expérience utilisateur."
           imageUrl="/background.webp"
-          overlayOpacity={30}
+          overlayOpacity={50}
           ctaVariant="primary"
-          ctaLabel="Demandez un devis gratuit"
+          ctaLabel="Me contacter"
+          colours="dark"
           onCtaClick={() =>
-            trackEvent("cta_click", path, screenSize, "hero_cta_click", {
-              action: "demander_devis",
-              label: "Demandez un devis gratuit",
-            })}
+            window.location.href = `${siteConfig.basePath}/contact`
+          }
         />
         <Section
           className="w-full px-4"
@@ -80,29 +79,11 @@ export default function Home() {
           >
             <Container className="w-full md:w-3/4 justify-center" type="col">
               <h2 className="text-3xl font-bold mb-4">
-                Création de Sites Web Professionnels
+                Je transforme des idées en interfaces web fluides, élégantes et faciles à maintenir.
               </h2>
               <p className="text-lg">
-                Découvrez comment nous pouvons transformer votre présence en
-                ligne avec des solutions sur mesure.
+                Avec une expertise en développement front-end et back-end, j'accompagne les entreprises et les entrepreneurs dans la création de sites web et d'applications performantes, optimisées pour le référencement et l'expérience utilisateur.
               </p>
-              <Container className="gap-6" type="col">
-                <FeatureItem
-                  icon={PencilRuler}
-                  title="Développement sur mesure"
-                  description="Chaque projet est adapté à vos besoins spécifiques pour garantir un résultat unique."
-                />
-                <FeatureItem
-                  icon={PiggyBank}
-                  title="Prix abordable"
-                  description="Des solutions accessibles pour tous les budgets, sans compromis sur la qualité."
-                />
-                <FeatureItem
-                  icon={Rocket}
-                  title="Optimisation avancée"
-                  description="Votre site bénéficie des dernières techniques pour maximiser sa performance et son référencement."
-                />
-              </Container>
             </Container>
             <Container className="w-full flex justify-center" type="col">
               <Container
@@ -111,14 +92,14 @@ export default function Home() {
               >
                 <Image
                   src={`${siteConfig.basePath}/mockup-2.webp`}
-                  className="w-full h-full md:w-8/20 object-cover rounded-2xl"
+                  className="w-full h-full md:w-8/20 object-cover rounded-2xl shadow-lg shadow-primary/30"
                   alt="Image 1"
                   width={500}
                   height={300}
                 />
                 <Image
                   src={`${siteConfig.basePath}/mockup-1.webp`}
-                  className="w-full h-full md:w-9/20 md:h-9/10 object-cover rounded-2xl mt-auto"
+                  className="w-full h-full md:w-9/20 md:h-9/10 object-cover rounded-2xl mt-auto shadow-lg shadow-primary/30"
                   alt="Image 2"
                   width={500}
                   height={300}
@@ -127,14 +108,14 @@ export default function Home() {
               <Container className="w-full gap-8" type="row">
                 <Image
                   src={`${siteConfig.basePath}/mockup-3.webp`}
-                  className="w-full h-full md:w-9/20 md:h-2/3 object-cover rounded-2xl"
+                  className="w-full h-full md:w-9/20 md:h-2/3 object-cover rounded-2xl shadow-lg shadow-primary/30"
                   alt="Image 3"
                   width={500}
                   height={300}
                 />
                 <Image
                   src={`${siteConfig.basePath}/mockup-4.webp`}
-                  className="w-full h-full md:w-11/20 object-cover rounded-2xl"
+                  className="w-full h-full md:w-11/20 object-cover rounded-2xl shadow-lg shadow-primary/30"
                   alt="Image 4"
                   width={500}
                   height={300}
@@ -147,29 +128,181 @@ export default function Home() {
             <TestimonialCard
               name="Jane Smith"
               role="CTO, Tech Innovations"
-              content="Sani Template a transformé notre façon de travailler. Leur équipe est réactive et les résultats sont au-delà de nos attentes."
+              content="Travailler avec Léo a été un plaisir absolu. Son expertise en développement web a permis de transformer notre vision en une réalité numérique impressionnante."
               imageUrl="/testimonial-1.webp"
             />
             <TestimonialCard
               name="John Doe"
-              content="C'est un produit fantastique ! Je le recommande vivement. Il a transformé notre flux de travail."
+              content="Léo a dépassé nos attentes à chaque étape du projet. Son attention aux détails et son engagement envers la qualité sont inégalés."
               imageUrl="/testimonial-2.webp"
             />
             <TestimonialCard
               name="Alice Johnson"
               role="CEO, Creative Agency"
-              content="Une expérience incroyable ! Le design est superbe et la performance est au rendez-vous."
+              content="Grâce à Léo, notre site web est non seulement beau, mais aussi incroyablement fonctionnel et performant. Je le recommande vivement à quiconque cherche un développeur talentueux."
               imageUrl="/testimonial-3.webp"
             />
           </Container>
         </Section>
+        <Section className="w-full" id="portfolio-section">
+          <Container className="container px-4 md:px-0" type="col">
+            <h2 className="text-3xl text-center font-bold mb-4">
+              Réalisations
+            </h2>
+            <p className="text-center text-lg mb-6">
+              Découvrez quelques-uns de mes projets récents.
+            </p>
+            <Container type="grid3">
+              <Card
+                title="Home'plans"
+                description="Un site vitrine moderne et épuré."
+                imageUrl="/projet1.webp"
+                link="/portfolio"
+              />
+              <Card
+                title="Black N White"
+                description="Une boutique en ligne performante."
+                imageUrl="/projet2.webp"
+                link="/portfolio"
+              />
+              <Card
+                title="Saint Michel"
+                description="Un site vitrine élégant et fonctionnel."
+                imageUrl="/projet3.webp"
+                link="/portfolio"
+              />
+              <Card
+                title="Glassy skin care"
+                description="Une boutique en ligne performante."
+                imageUrl="/projet4.webp"
+                link="/portfolio"
+              />
+              <Card
+                title="MakeWebP"
+                description="Un outil de conversion d'images en WebP."
+                imageUrl="/projet5.webp"
+                link="/portfolio"
+              />
+            </Container>
+            <p className="text-center text-lg mt-6">
+              ...et bien d'autres&nbsp;
+              <Link
+                href="/portfolio"
+                className="text-primary underline hover:text-foreground transition-colors"
+              >
+                découvrez tout le portfolio
+              </Link>
+            </p>
+          </Container>
+        </Section>
         <Section
           className="w-full bg-background shadow-md"
-          id="services-section"
+          id="features-section"
         >
           <h2 className="text-3xl text-center font-bold my-8">
-            Nos Services
+            Mes competences
           </h2>
+          <p className="text-center text-lg mb-8">
+            Voici les outils et pratiques que j’utilise au quotidien pour concevoir des expériences web fiables et soignées.
+          </p>
+          <Container className="p-6 gap-6" type="grid3">
+            <Container className="bg-truebase p-4 !m-0 rounded-xl" type="col">
+              <FeatureItem
+                icon={Code2}
+                title="Développement Front-End"
+                description="Création d’interfaces modernes en HTML, CSS, JavaScript et React."
+              />
+            </Container>
+            <Container className="bg-truebase p-4 !m-0 rounded-xl" type="col">
+              <FeatureItem
+                icon={PencilRuler}
+                title="Intégration & UI/UX"
+                description="Mise en place de designs responsive, design system et micro-interactions."
+              />
+            </Container>
+            <Container className="bg-truebase p-4 !m-0 rounded-xl" type="col">
+              <FeatureItem
+                icon={Heart}
+                title="Accessibilité (A11y)"
+                description="Conception de sites accessibles, compatibles clavier et lecteurs d’écran."
+              />
+            </Container>
+            <Container className="bg-truebase p-4 !m-0 rounded-xl" type="col">
+              <FeatureItem
+                icon={Rocket}
+                title="Optimisation & Performance"
+                description="Chargement rapide, images optimisées, structure propre et scalable."
+              />
+            </Container>
+            <Container className="bg-truebase p-4 !m-0 rounded-xl" type="col">
+              <FeatureItem
+                icon={Code2}
+                title="Méthodes de travail"
+                description="Organisation en Kanban, conception modulaire et gestion de projet professionnelle."
+              />
+            </Container>
+          </Container>
+          <Container className="container px-4 md:px-0 mt-8" type="row">
+            <CallToAction
+              title="Vous avez un projet en tête ?"
+              description="Contactez-moi dès aujourd’hui et je vous aiderai à le concrétiser."
+              ctaVariant="primary"
+              ctaLabel="Me contacter"
+            />
+          </Container>
+        </Section>
+
+        <Section
+          className="w-full"
+          id="welcome-section"
+        >
+          <h2 className="text-2xl text-center font-bold mb-4">
+            Welcome to Our Site
+          </h2>
+          <p className="text-center text-lg">
+            This is a simple example of a section with a title and some content.
+          </p>
+          <Button
+            variant="primary"
+            className="flex mx-auto my-5"
+          >
+            Bouton avec une redirection
+          </Button>
+          <Container
+            className="container px-4 md:px-0 py-6 gap-10"
+            type="grid3"
+          >
+            <FeatureItem
+              icon={Code2}
+              title="Développement rapide"
+              description="Démarrez chaque projet avec une base solide et réutilisable."
+            />
+            <FeatureItem
+              icon={ShieldCheck}
+              title="Sécurité intégrée"
+              description="Protégez vos applications avec des fonctionnalités de sécurité robustes."
+            />
+            <FeatureItem
+              icon={Rocket}
+              title="Déploiement facile"
+              description="Mettez vos applications en production en un clin d'œil."
+            />
+            <FeatureItem
+              icon={Lamp}
+              title="Documentation complète"
+              description="Accédez à une documentation détaillée pour chaque composant."
+            />
+            <FeatureItem
+              icon={Heart}
+              title="Support communautaire"
+              description="Rejoignez une communauté active pour partager vos expériences et obtenir de l'aide."
+            />
+            <FeatureItem
+              icon={User}
+              title="Personnalisation facile"
+              description="Adaptez chaque composant à vos besoins spécifiques."
+            />
+          </Container>
           <Container type="grid3" className="container mx-auto">
             <div className="flex flex-col p-6">
               <div className="flex flex-col items-center mb-6">
@@ -224,117 +357,6 @@ export default function Home() {
                 En savoir plus
               </Button>
             </div>
-          </Container>
-          <Container className="container px-4 md:px-0 mt-8" type="row">
-            <CallToAction
-              title="Prêt à lancer votre site ?"
-              description="Contactez-moi dès aujourd’hui et obtenez un devis personnalisé."
-              ctaVariant="primary"
-              ctaLabel="Demander un devis"
-            />
-          </Container>
-        </Section>
-        <Section className="w-full" id="portfolio-section">
-          <Container className="container px-4 md:px-0" type="col">
-            <h2 className="text-2xl text-center font-bold mb-4">
-              Réalisations
-            </h2>
-            <p className="text-center text-lg mb-6">
-              Découvrez quelques-uns de nos projets récents.
-            </p>
-            <Container type="grid3">
-              <Card
-                title="Home'plans"
-                description="Un site vitrine moderne et épuré."
-                imageUrl="/projet1.webp"
-                link="/portfolio"
-              />
-              <Card
-                title="Black N White"
-                description="Une boutique en ligne performante."
-                imageUrl="/projet2.webp"
-                link="/portfolio"
-              />
-              <Card
-                title="Saint Michel"
-                description="Un site vitrine élégant et fonctionnel."
-                imageUrl="/projet3.webp"
-                link="/portfolio"
-              />
-              <Card
-                title="Glassy skin care"
-                description="Une boutique en ligne performante."
-                imageUrl="/projet4.webp"
-                link="/portfolio"
-              />
-              <Card
-                title="MakeWebP"
-                description="Un outil de conversion d'images en WebP."
-                imageUrl="/projet5.webp"
-                link="/portfolio"
-              />
-            </Container>
-            <p className="text-center text-lg mt-6">
-              ...et bien d'autres&nbsp;
-              <Link
-                href="/portfolio"
-                className="text-primary underline hover:text-foreground transition-colors"
-              >
-                découvrez tout le portfolio
-              </Link>
-            </p>
-          </Container>
-        </Section>
-        <Section
-          className="w-full"
-          id="welcome-section"
-        >
-          <h2 className="text-2xl text-center font-bold mb-4">
-            Welcome to Our Site
-          </h2>
-          <p className="text-center text-lg">
-            This is a simple example of a section with a title and some content.
-          </p>
-          <Button
-            variant="primary"
-            className="flex mx-auto my-5"
-          >
-            Bouton avec une redirection
-          </Button>
-          <Container
-            className="container px-4 md:px-0 py-6 gap-10"
-            type="grid3"
-          >
-            <FeatureItem
-              icon={Code2}
-              title="Développement rapide"
-              description="Démarrez chaque projet avec une base solide et réutilisable."
-            />
-            <FeatureItem
-              icon={ShieldCheck}
-              title="Sécurité intégrée"
-              description="Protégez vos applications avec des fonctionnalités de sécurité robustes."
-            />
-            <FeatureItem
-              icon={Rocket}
-              title="Déploiement facile"
-              description="Mettez vos applications en production en un clin d'œil."
-            />
-            <FeatureItem
-              icon={Lamp}
-              title="Documentation complète"
-              description="Accédez à une documentation détaillée pour chaque composant."
-            />
-            <FeatureItem
-              icon={Heart}
-              title="Support communautaire"
-              description="Rejoignez une communauté active pour partager vos expériences et obtenir de l'aide."
-            />
-            <FeatureItem
-              icon={User}
-              title="Personnalisation facile"
-              description="Adaptez chaque composant à vos besoins spécifiques."
-            />
           </Container>
         </Section>
         <Section

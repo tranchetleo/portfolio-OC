@@ -16,9 +16,9 @@ html {
 }
 
 :root {
-  --truebase: #f3f3f3;
+  --truebase: #F5FAFF;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #001833;
   --primary: #0070f3;
   --secondary: #9a00f3;
 }
@@ -35,10 +35,10 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --truebase: #171717;
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --primary: #3e8de7;
+    --truebase: #000C1A;
+    --background: #00050A;
+    --foreground: #F5FAFF;
+    --primary: #2489FF;
     --secondary: #ab4fe0;
   }
 }

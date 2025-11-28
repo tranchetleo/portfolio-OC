@@ -22,7 +22,7 @@ export function Section(
   return (
     <section
       id={id}
-      className={`pb-12 md:pb-20 ${className}`}
+      className={`py-12 md:pb-20 ${className}`}
       style={{
         backgroundImage: `url(${siteConfig.basePath}${backgroundImageUrl})`,
         backgroundSize: "cover",

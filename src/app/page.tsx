@@ -62,7 +62,7 @@ export default function Home() {
         />
         <Section
           className="w-full px-4"
-          id="welcome-section"
+          id="about-section"
         >
           <Container
             className="container gap-10"
@@ -141,7 +141,7 @@ export default function Home() {
             />
           </Container>
         </Section>
-        <Section className="w-full" id="portfolio-section">
+        <Section className="w-full" id="projects-section">
           <Container className="container px-4 md:px-0" type="col">
             <h2 className="text-3xl text-center font-bold mb-4 uppercase underline decoration-primary decoration-3">
               Projets
@@ -194,7 +194,7 @@ export default function Home() {
         </Section>
         <Section
           className="w-full bg-background shadow-md"
-          id="features-section"
+          id="skills-section"
         >
           <h2 className="text-3xl text-center font-bold my-10 uppercase underline decoration-primary decoration-3">
             Mes competences
@@ -320,7 +320,7 @@ export default function Home() {
             <FAQ faqs={faqs} />
           </Container>
         </Section>
-        <ContactSection title="Contactez-moi" subtitle="N'hésitez pas à me contacter pour toute question ou projet."/>
+        <ContactSection sectionId="contact-section" title="Contactez-moi" subtitle="N'hésitez pas à me contacter pour toute question ou projet."/>
       </main>
     </div>
   );

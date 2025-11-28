@@ -24,12 +24,6 @@ export function Meta() {
       longitude: org.geo.lng,
     },
     sameAs: org.sameAs,
-    founder: {
-      "@type": "Person",
-      name: org.founder.name,
-      jobTitle: org.founder.jobTitle,
-      image: `${siteConfig.url}${org.founder.image}`,
-    },
     makesOffer: org.services.map((service) => ({
       "@type": "Offer",
       itemOffered: {
@@ -39,14 +33,6 @@ export function Meta() {
       },
       price: service.price,
       priceCurrency: service.currency,
-    })),
-    faq: siteConfig.mainFAQ.map((faq) => ({
-      "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
     })),
   };
 

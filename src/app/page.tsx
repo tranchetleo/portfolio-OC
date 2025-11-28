@@ -57,7 +57,7 @@ export default function Home() {
           ctaLabel="Me contacter"
           colours="dark"
           onCtaClick={() =>
-            window.location.href = `${siteConfig.basePath}/contact`
+            window.location.href = `#contact-section`
           }
         />
         <Section
@@ -319,6 +319,9 @@ export default function Home() {
               description="Contactez-moi dès aujourd’hui et je vous aiderai à le concrétiser."
               ctaVariant="primary"
               ctaLabel="Me contacter"
+              onClick={() =>
+                window.location.href = `#contact-section`
+              }
             />
           </Container>
         </Section>

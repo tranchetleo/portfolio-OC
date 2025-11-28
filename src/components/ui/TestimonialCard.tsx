@@ -8,13 +8,13 @@ type TestimonialCardProps = {
   role?: string
   content: string
   imageUrl?: string
+  rating?: number
 }
 
-export function TestimonialCard({ name, role, content, imageUrl }: TestimonialCardProps) {
+export function TestimonialCard({ name, role, content, imageUrl, rating }: TestimonialCardProps) {
   return (
     <div className="flex flex-col rounded-xl bg-background p-6 shadow-md">
-      <p className="text-foreground/80 italic mb-6">“{content}”</p>
-      <div className="flex items-center gap-4 mt-auto">
+      <div className="flex items-center gap-4 mb-6">
         {imageUrl && (
           <Image
             src={`${siteConfig.basePath}${imageUrl}`}
@@ -24,12 +24,21 @@ export function TestimonialCard({ name, role, content, imageUrl }: TestimonialCa
             height={48}
           />
         ) || (
-          <div className="w-12 h-12 rounded-full bg-foreground/50" />
-        )}
+            <div className="w-12 h-12 rounded-full bg-foreground/50" />
+          )}
         <div>
           <p className="text-sm font-medium">{name}</p>
           {role && <p className="text-sm text-foreground/80">{role}</p>}
         </div>
+      </div>
+      <p className="text-foreground/80 italic">“{content}”</p>
+      <div className="mt-auto">
+        {rating && Array.from({ length: rating }).map((_, index) => (
+          <span key={index} className="text-yellow-400">★</span>
+        ))}
+        {rating && Array.from({ length: 5 - rating }).map((_, index) => (
+          <span key={index} className="text-foreground/70">★</span>
+        ))}
       </div>
     </div>
   )

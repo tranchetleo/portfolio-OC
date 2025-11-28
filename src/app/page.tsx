@@ -2,23 +2,14 @@
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/layout/Container";
-import { Button } from "@/components/ui/Button";
 import { FeatureItem } from "@/components/ui/FeatureItem";
 import {
   Code2,
   Heart,
-  Lamp,
-  MonitorCheck,
   PencilRuler,
-  PiggyBank,
   Rocket,
-  ShieldCheck,
-  ShoppingCart,
-  Sparkles,
-  User,
 } from "lucide-react";
 import { TestimonialCard } from "@/components/ui/TestimonialCard";
-import { PricingCard } from "@/components/ui/PricingCard";
 import { CallToAction } from "@/components/ui/CallToAction";
 import { HeroWithBackground } from "@/components/ui/HeroWithBackground";
 import { ContactSection } from "@/components/ui/ContactSection";
@@ -78,11 +69,14 @@ export default function Home() {
             type="grid2"
           >
             <Container className="w-full md:w-3/4 justify-center" type="col">
-              <h2 className="text-3xl font-bold mb-4">
-                Je transforme des idées en interfaces web fluides, élégantes et faciles à maintenir.
+              <h2 className="text-4xl font-bold mb-4 uppercase underline decoration-primary decoration-3">
+                À propos
               </h2>
+              <h3 className="text-2xl font-bold mb-4">
+                Je transforme des idées en interfaces web fluides, élégantes et faciles à maintenir.
+              </h3>
               <p className="text-lg">
-                Avec une expertise en développement front-end et back-end, j'accompagne les entreprises et les entrepreneurs dans la création de sites web et d'applications performantes, optimisées pour le référencement et l'expérience utilisateur.
+                Avec une expertise en <strong className="text-primary">développement front-end et back-end</strong>, j'accompagne les entreprises et les entrepreneurs dans la création de sites web et d'applications performantes, optimisées pour le référencement et l'expérience utilisateur.
               </p>
             </Container>
             <Container className="w-full flex justify-center" type="col">
@@ -123,34 +117,37 @@ export default function Home() {
               </Container>
             </Container>
           </Container>
-          <h2 className="text-3xl text-center font-bold mb-8">Témoignages</h2>
+          <h2 className="text-3xl text-center font-bold mb-8 uppercase underline decoration-primary decoration-3">Témoignages</h2>
           <Container type="grid3" className="container mx-auto">
             <TestimonialCard
               name="Jane Smith"
               role="CTO, Tech Innovations"
               content="Travailler avec Léo a été un plaisir absolu. Son expertise en développement web a permis de transformer notre vision en une réalité numérique impressionnante."
               imageUrl="/testimonial-1.webp"
+              rating={4}
             />
             <TestimonialCard
               name="John Doe"
               content="Léo a dépassé nos attentes à chaque étape du projet. Son attention aux détails et son engagement envers la qualité sont inégalés."
               imageUrl="/testimonial-2.webp"
+              rating={5}
             />
             <TestimonialCard
               name="Alice Johnson"
               role="CEO, Creative Agency"
               content="Grâce à Léo, notre site web est non seulement beau, mais aussi incroyablement fonctionnel et performant. Je le recommande vivement à quiconque cherche un développeur talentueux."
               imageUrl="/testimonial-3.webp"
+              rating={4}
             />
           </Container>
         </Section>
         <Section className="w-full" id="portfolio-section">
           <Container className="container px-4 md:px-0" type="col">
-            <h2 className="text-3xl text-center font-bold mb-4">
-              Réalisations
+            <h2 className="text-3xl text-center font-bold mb-4 uppercase underline decoration-primary decoration-3">
+              Projets
             </h2>
             <p className="text-center text-lg mb-6">
-              Découvrez quelques-uns de mes projets récents.
+              Découvrez quelques-unes de mes réalisations récentes.
             </p>
             <Container type="grid3">
               <Card
@@ -199,13 +196,13 @@ export default function Home() {
           className="w-full bg-background shadow-md"
           id="features-section"
         >
-          <h2 className="text-3xl text-center font-bold my-8">
+          <h2 className="text-3xl text-center font-bold my-10 uppercase underline decoration-primary decoration-3">
             Mes competences
           </h2>
-          <p className="text-center text-lg mb-8">
+          <p className="text-center text-lg mb-6">
             Voici les outils et pratiques que j’utilise au quotidien pour concevoir des expériences web fiables et soignées.
           </p>
-          <Container className="p-6 gap-6" type="grid3">
+          <Container className="container p-6 gap-6" type="grid3">
             <Container className="bg-truebase p-4 !m-0 rounded-xl" type="col">
               <FeatureItem
                 icon={Code2}
@@ -254,210 +251,65 @@ export default function Home() {
 
         <Section
           className="w-full"
-          id="welcome-section"
+          id="study-path-section"
         >
-          <h2 className="text-2xl text-center font-bold mb-4">
-            Welcome to Our Site
-          </h2>
-          <p className="text-center text-lg">
-            This is a simple example of a section with a title and some content.
-          </p>
-          <Button
-            variant="primary"
-            className="flex mx-auto my-5"
-          >
-            Bouton avec une redirection
-          </Button>
-          <Container
-            className="container px-4 md:px-0 py-6 gap-10"
-            type="grid3"
-          >
-            <FeatureItem
-              icon={Code2}
-              title="Développement rapide"
-              description="Démarrez chaque projet avec une base solide et réutilisable."
-            />
-            <FeatureItem
-              icon={ShieldCheck}
-              title="Sécurité intégrée"
-              description="Protégez vos applications avec des fonctionnalités de sécurité robustes."
-            />
-            <FeatureItem
-              icon={Rocket}
-              title="Déploiement facile"
-              description="Mettez vos applications en production en un clin d'œil."
-            />
-            <FeatureItem
-              icon={Lamp}
-              title="Documentation complète"
-              description="Accédez à une documentation détaillée pour chaque composant."
-            />
-            <FeatureItem
-              icon={Heart}
-              title="Support communautaire"
-              description="Rejoignez une communauté active pour partager vos expériences et obtenir de l'aide."
-            />
-            <FeatureItem
-              icon={User}
-              title="Personnalisation facile"
-              description="Adaptez chaque composant à vos besoins spécifiques."
-            />
-          </Container>
-          <Container type="grid3" className="container mx-auto">
-            <div className="flex flex-col p-6">
-              <div className="flex flex-col items-center mb-6">
-                <MonitorCheck className="w-1/3 h-auto text-primary" />
-                <h3 className="text-2xl font-semibold">
-                  Création de site vitrine
-                </h3>
-              </div>
-              <p className="text-lg text-center mb-6">
-                <strong className="text-primary">
-                  Faites bonne impression dès le premier clic.
-                </strong>{" "}
-                Nous créons des sites vitrine sur mesure et parfaitement adaptés
-                à vos besoins. Design responsive, optimisation SEO avancée, tout
-                y est !
-              </p>
-              <Button variant="primary" className="mt-auto !rounded-xl">
-                En savoir plus
-              </Button>
-            </div>
-            <div className="flex flex-col p-6">
-              <div className="flex flex-col items-center mb-6">
-                <Sparkles className="w-1/3 h-auto text-primary" />
-                <h3 className="text-2xl font-semibold">Référencement SEO</h3>
-              </div>
-              <p className="text-lg text-center mb-6">
-                <strong className="text-primary">
-                  Dominez les résultats de recherche.
-                </strong>{" "}
-                Notre expertise en SEO vous permet d'atteindre les premières
-                positions sur Google. Nous optimisons votre site pour un
-                référencement naturel performant et durable.
-              </p>
-              <Button variant="primary" className="mt-auto !rounded-xl">
-                En savoir plus
-              </Button>
-            </div>
-            <div className="flex flex-col p-6">
-              <div className="flex flex-col items-center mb-6">
-                <ShoppingCart className="w-1/3 h-auto text-primary" />
-                <h3 className="text-2xl font-semibold">E-commerce</h3>
-              </div>
-              <p className="text-lg text-center mb-6">
-                <strong className="text-primary">
-                  Transformez vos visiteurs en clients fidèles.
-                </strong>{" "}
-                Nous développons des boutiques en ligne performantes et
-                sécurisées, optimisées pour la conversion et l'expérience
-                utilisateur.
-              </p>
-              <Button variant="primary" className="mt-auto rounded-xl">
-                En savoir plus
-              </Button>
-            </div>
-          </Container>
-        </Section>
-        <Section
-          className="w-full"
-          id="features-section"
-        >
-          <h2 className="text-2xl text-center font-bold mb-4">
-            Welcome to Our Site
-          </h2>
-          <p className="text-center text-lg">
-            This is a simple example of a section with a title and some content.
-          </p>
-          <Container
-            className="container w9/10 md:w-7/10 px-4 md:px-0 gap-8"
-            type="row"
-          >
-            <PricingCard
-              title="Standard"
-              price="29€ / mois"
-              features={[
-                "Site 5 pages",
-                "Design sur mesure",
-                "Optimisation SEO",
-                "Hébergement inclus",
-                "Support standard",
-              ]}
-              ctaLabel="Choisir cette offre"
-            />
-            <PricingCard
-              title="Premium"
-              price="49€ / mois"
-              features={[
-                "Site 10 pages",
-                "Design sur mesure",
-                "Optimisation SEO avancée",
-                "Hébergement inclus",
-                "Support prioritaire",
-              ]}
-              ctaLabel="Choisir cette offre"
-            />
-            <PricingCard
-              title="Entreprise"
-              price="99€ / mois"
-              features={[
-                "Site illimité",
-                "Design sur mesure",
-                "Optimisation SEO avancée",
-                "Hébergement inclus",
-                "Support prioritaire",
-              ]}
-              ctaLabel="Choisir cette offre"
-              highlight
-            />
-          </Container>
-          <Container className="container px-4 md:px-0" type="grid3">
-            <Card
-              title="Card Title"
-              description="This is a description for the card."
-              imageUrl="/next.svg"
-              cta={{
-                label: "Learn More",
-                onClick: () => alert("Card clicked!"),
-                variant: "primary",
-                classname: "mt-4",
-              }}
-            />
-            <Card
-              title="Card Title"
-              description="This is a description for the card. It can be longer to show how it wraps."
-              imageUrl="/next.svg"
-              cta={{
-                label: "Learn More",
-                onClick: () => alert("Card clicked!"),
-                variant: "secondary",
-                classname: "mt-4",
-              }}
-            />
-            <Card
-              title="Card Title"
-              description="This is a description for the card."
-              imageUrl="/next.svg"
-              cta={{
-                label: "Learn More",
-                onClick: () => alert("Card clicked!"),
-                variant: "secondary",
-                classname: "mt-4",
-              }}
-            />
-          </Container>
-        </Section>
-        <Section
-          className="w-full"
-          id="contact-section"
-        >
-          <Container className="container px-4 md:px-0" type="row">
-            <CallToAction
-              title="Prêt à lancer votre site ?"
-              description="Contactez-moi dès aujourd’hui et obtenez un devis personnalisé."
-              ctaVariant="primary"
-              ctaLabel="Demander un devis"
-            />
+          <Container className="container px-4 md:px-0" type="col">
+            <h2 className="text-3xl text-center font-bold mb-4 uppercase underline decoration-primary decoration-3">
+              Mon parcours
+            </h2>
+            <p className="text-center text-lg mb-6">
+              Découvrez mon parcours académique et professionnel qui m'a conduit à devenir un développeur web passionné et compétent.
+            </p>
+            <ul className="grid gap-4 md:grid-cols-4">
+              <li className="bg-background rounded-xl p-4 shadow-md shadow-primary/10">
+                <Image
+                  src={`${siteConfig.basePath}/lycee-nicolas-appert.webp`}
+                  alt="Lycée Nicolas Appert"
+                  className="w-full aspect-[2/1] object-cover rounded-md mb-4"
+                  width={384}
+                  height={192}
+                />
+                <strong className="text-primary">Baccalauréat Général</strong><br /><br />
+                <span className="underline decoration-primary decoration-1">Lycée Nicolas Appert, 2021</span><br /><br />
+                Spécialité Mathématiques et Numérique et sciences de l'Informatique
+              </li>
+              <li className="bg-background rounded-xl p-4 shadow-md shadow-primary/10">
+                <Image
+                  src={`${siteConfig.basePath}/iut-nantes.webp`}
+                  alt="IUT de Nantes"
+                  className="w-full aspect-[2/1] object-cover rounded-md mb-4"
+                  width={384}
+                  height={192}
+                />
+                <strong className="text-primary">BUT Informatique</strong><br /><br />
+                <span className="underline decoration-primary decoration-1">IUT de Nantes, 2021-2023</span><br /><br />
+                Parcours Réalisation d'applications : conception, développement, validation
+              </li>
+              <li className="bg-background rounded-xl p-4 shadow-md shadow-primary/10">
+                <Image
+                  src={`${siteConfig.basePath}/leo-tranchet.webp`}
+                  alt="Léo Tranchet - Développeur Web Indépendant"
+                  className="w-full aspect-[2/1] object-cover rounded-md mb-4"
+                  width={384}
+                  height={192}
+                />
+                <strong className="text-primary">Developpeur Web Indépendant</strong><br /><br />
+                <span className="underline decoration-primary decoration-1">Auto-entrepreneur, 2023-présent</span><br /><br />
+                Conception et développement de sites web pour des clients variés.
+              </li>
+              <li className="bg-background rounded-xl p-4 shadow-md shadow-primary/10">
+                <Image
+                  src={`${siteConfig.basePath}/openclassrooms.webp`}
+                  alt="OpenClassrooms"
+                  className="w-full aspect-[2/1] object-cover rounded-md mb-4"
+                  width={384}
+                  height={192}
+                />
+                <strong className="text-primary">Alternance Développeur Web</strong><br /><br />
+                <span className="underline decoration-primary decoration-1">OpenClassrooms, 2025-2026</span><br /><br />
+                Formation en alternance pour approfondir mes compétences en développement web.
+              </li>
+            </ul>
           </Container>
         </Section>
         <Section
@@ -468,7 +320,7 @@ export default function Home() {
             <FAQ faqs={faqs} />
           </Container>
         </Section>
-        <ContactSection />
+        <ContactSection title="Contactez-moi" subtitle="N'hésitez pas à me contacter pour toute question ou projet."/>
       </main>
     </div>
   );

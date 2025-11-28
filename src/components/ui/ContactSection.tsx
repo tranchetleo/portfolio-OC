@@ -62,7 +62,7 @@ export function ContactSection({
           <div className="mt-12">
             <h3 className="text-xl font-semibold flex items-center justify-center gap-2 mb-4">
               <Users className="w-6 h-6" />
-              Suivez-nous
+              Suivez-moi
             </h3>
             <SocialLinks className="justify-center" />
           </div>

@@ -3,8 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   distDir: "out",
   output: 'export',
-  assetPrefix: '/test', // Adjust this if you are deploying to a subpath
-  basePath: '/test', // Adjust this if you are deploying to a subpath
+  assetPrefix: '/oc-portfolio', // Adjust this if you are deploying to a subpath
+  basePath: '/oc-portfolio', // Adjust this if you are deploying to a subpath
   trailingSlash: true,
   images: {
     unoptimized: true, // Disable image optimization for static export

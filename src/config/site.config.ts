@@ -2,9 +2,9 @@ export const siteConfig = {
   name: 'Léo Tranchet',
 
   locale: 'fr-FR',
-  url: 'https://leo-tranchet.dev',
+  url: 'https://sani-web.com',
   logo: '/logo.webp',
-  basePath: '/test', // set to '' if you are not deploying to a subpath
+  basePath: '/oc-portfolio', // set to '' if you are not deploying to a subpath
 
   email: 'leo.tranchet.pro@gmail.com',
   phone: '+33 6 65 44 45 79',
@@ -20,28 +20,20 @@ export const siteConfig = {
       metaTitle: 'Léo Tranchet - Développeur Web Indépendant',
       metaDescription: 'Découvrez Léo Tranchet, développeur web indépendant basé à Nantes 44000, spécialisé dans la création de sites vitrines et e-commerce.',
       sections: [ // Links to sections on the homepage for single-page navigation
-        { href: '/#welcome-section', label: 'Bienvenue' },
-        { href: '/#features-section', label: 'Fonctionnalités' },
+        { href: '/#about-section', label: 'À propos' },
+        { href: '/#projects-section', label: 'Projets' },
+        { href: '/#skills-section', label: 'Compétences' },
+        { href: '/#study-path-section', label: 'Parcours' },
+        { href: '/#faq-section', label: 'FAQ' },
         { href: '/#contact-section', label: 'Contact' },
       ]
-    },
-    { label: 'Projets',
-      href: '/projets',
-      metaTitle: 'Léo Tranchet - Projets de Développement Web',
-      metaDescription: 'Explorez les projets de Léo Tranchet, développeur web indépendant à Nantes 44000, mettant en avant ses compétences en création de sites vitrines et e-commerce.'
-    },
-    { label: 'Contact',
-      href: '/contact',
-      metaTitle: 'Contactez-nous',
-      metaDescription: 'Entrer en contact avec l\'équipe de SaniTemplate.'
     },
   ],
 
   company: {
     legalName: "Léo Tranchet",
     description: "Léo Tranchet est un développeur web indépendant spécialisé dans la création de sites vitrine et e-commerce.",
-    type: "Person", // ou "Organization" ou "Person"
-    businessType: "WebDesign", // pour LocalBusiness
+    type: "LocalBusiness", // ou "Organization" ou "Person"
     address: {
       street: "3 Square Saint-Pasquier",
       postalCode: "44000",
@@ -54,11 +46,6 @@ export const siteConfig = {
     },
     phone: "+33 6 65 44 45 79",
     email: "leo.tranchet.pro@gmail.com",
-    founder: {
-      name: "Léo Tranchet",
-      jobTitle: "Développeur Web Indépendant",
-      image: "/leo.jpg",
-    },
     sameAs: [
       "https://www.linkedin.com/in/leotranchet",
     ],

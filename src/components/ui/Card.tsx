@@ -21,12 +21,12 @@ type CardProps = {
 export function Card({ title, description, imageUrl, link, cta }: CardProps) {
   return (
     <div
-      className="rounded-lg shadow-md bg-background overflow-hidden h-full flex flex-col relative group"
+      className="rounded-lg shadow-md bg-background h-full flex flex-col relative group"
     >
       {link && (
         <Link
           href={link}
-          className="absolute inset-0 z-10"
+          className="absolute inset-0 z-10 focus:outline-2 focus:outline-offset-2 focus:outline-primary rounded-lg"
           aria-label={title}
         />
       )}

@@ -30,15 +30,15 @@ type PlatformKey =
   | "tripadvisor";
 
 const iconMap: Record<PlatformKey, JSX.Element> = {
-  website: <FaGlobe className="w-5 h-5" />,
-  twitter: <SiX className="w-5 h-5" />,
-  instagram: <SiInstagram className="w-5 h-5" />,
-  facebook: <SiFacebook className="w-5 h-5" />,
-  linkedin: <SiLinkedin className="w-5 h-5" />,
-  tiktok: <SiTiktok className="w-5 h-5" />,
-  uberEats: <SiUbereats className="w-5 h-5" />,
-  deliveroo: <SiDeliveroo className="w-5 h-5" />,
-  tripadvisor: <SiTripadvisor className="w-5 h-5" />,
+  website: <FaGlobe className="w-5 h-5" title="Website" />,
+  twitter: <SiX className="w-5 h-5" title="Twitter" />,
+  instagram: <SiInstagram className="w-5 h-5" title="Instagram" />,
+  facebook: <SiFacebook className="w-5 h-5" title="Facebook" />,
+  linkedin: <SiLinkedin className="w-5 h-5" title="LinkedIn" />,
+  tiktok: <SiTiktok className="w-5 h-5" title="TikTok" />,
+  uberEats: <SiUbereats className="w-5 h-5" title="UberEats" />,
+  deliveroo: <SiDeliveroo className="w-5 h-5" title="Deliveroo" />,
+  tripadvisor: <SiTripadvisor className="w-5 h-5" title="Tripadvisor" />,
 };
 
 export function SocialLinks({ className = "" }: { className?: string }) {

@@ -17,7 +17,7 @@ export function FAQ({ faqs }: { faqs: FAQItem[] }) {
 
   return (
     <div className="mx-auto">
-      <h2 className="text-3xl font-bold mb-8 text-center">
+      <h2 className="text-3xl font-bold mb-8 text-center uppercase underline decoration-primary decoration-3">
         Foire aux questions
       </h2>
       <div className="space-y-4">

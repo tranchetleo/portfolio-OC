@@ -149,47 +149,121 @@ export default function Home() {
             <p className="text-center text-lg mb-6">
               Découvrez quelques-unes de mes réalisations récentes.
             </p>
-            <Container type="grid3">
-              <Card
-                title="Home'plans"
-                description="Un site vitrine moderne et épuré."
-                imageUrl="/projet1.webp"
-                link="/portfolio"
+            <Container className="container mx-auto gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="grid2">
+              <Image
+                src={`${siteConfig.basePath}/projet1.webp`}
+                alt="Mockup du projet Home'plans"
+                width={600}
+                height={400}
+                className="w-full aspect-[4/3] object-cover rounded-xl"
               />
-              <Card
-                title="Black N White"
-                description="Une boutique en ligne performante."
-                imageUrl="/projet2.webp"
-                link="/portfolio"
-              />
-              <Card
-                title="Saint Michel"
-                description="Un site vitrine élégant et fonctionnel."
-                imageUrl="/projet3.webp"
-                link="/portfolio"
-              />
-              <Card
-                title="Glassy skin care"
-                description="Une boutique en ligne performante."
-                imageUrl="/projet4.webp"
-                link="/portfolio"
-              />
-              <Card
-                title="MakeWebP"
-                description="Un outil de conversion d'images en WebP."
-                imageUrl="/projet5.webp"
-                link="/portfolio"
+              <Container className="w-full md:w-9/10 flex flex-col justify-center gap-6" type="col">
+                <h3 className="text-2xl font-bold text-primary uppercase">
+                  Home'plans - Site Vitrine Moderne
+                </h3>
+                <p>
+                  Home'plans souhaitait un <strong className="text-primary">site vitrine moderne</strong> pour présenter ses services de conception de plans de maison. L'objectif était de créer une <strong className="text-primary">interface épurée, facile à naviguer et optimisée pour le référencement.</strong>
+                </p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Stack et compétences utilisées :</h4>
+                <p>Pour ce projet simple, j'ai utilisé les technologies <strong className="text-primary">HTML5, CSS3, JavaScript, PHP</strong> et mis en place de nombreuses <strong className="text-primary">bonnes pratiques SEO</strong>.</p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Résultats et perspectives d'amélioration :</h4>
+                <p>
+                  Le site a permis à Home'plans d'augmenter sa visibilité en ligne et d'attirer de nouveaux clients. À l'avenir, des fonctionnalités supplémentaires telles qu'un blog et une section de témoignages clients pourraient être intégrées pour enrichir le contenu.
+                </p>
+              </Container>
+            </Container>
+            <Container className="container mx-auto gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="grid2">
+              <Container className="w-full md:w-9/10 flex flex-col justify-center gap-6" type="col">
+                <h3 className="text-2xl font-bold text-primary uppercase">
+                  Glassy Skin Care - Site vitrine
+                </h3>
+                <p>
+                  Glassy Skin Care avait besoin d'un <strong className="text-primary">site vitrine élégant</strong> pour présenter ses produits de soins de la peau. Le défi était de créer une <strong className="text-primary">expérience utilisateur immersive</strong> tout en mettant en avant l'aspect naturel et haut de gamme de la marque.
+                </p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Stack et compétences utilisées :</h4>
+                <p>Pour ce projet, j'ai utilisé <strong className="text-primary">React, Next.js, Tailwind CSS</strong> et intégré des animations subtiles avec <strong className="text-primary">Framer Motion</strong>.</p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Résultats et perspectives d'amélioration :</h4>
+                <p>
+                  Le site a reçu des retours positifs pour son design soigné et son expérience utilisateur fluide. Des fonctionnalités supplémentaires telles qu'une boutique en ligne pourraient être envisagées pour étendre la présence de la marque.
+                </p>
+              </Container>
+              <Image
+                src={`${siteConfig.basePath}/projet4.webp`}
+                alt="Mockup du projet Glassy Skin Care"
+                width={600}
+                height={400}
+                className="w-full aspect-[4/3] object-cover rounded-xl"
               />
             </Container>
-            <p className="text-center text-lg mt-6">
-              ...et bien d'autres&nbsp;
-              <Link
-                href="/portfolio"
-                className="text-primary underline hover:text-foreground transition-colors"
-              >
-                découvrez tout le portfolio
-              </Link>
-            </p>
+            <Container className="container mx-auto gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="grid2">
+              <Image
+                src={`${siteConfig.basePath}/projet5.webp`}
+                alt="Mockup du projet MakeWebP"
+                width={600}
+                height={400}
+                className="w-full aspect-[4/3] object-cover rounded-xl"
+              />
+              <Container className="w-full md:w-9/10 flex flex-col justify-center gap-6" type="col">
+                <h3 className="text-2xl font-bold text-primary uppercase">
+                  MakeWebP - Outil de conversion d'images
+                </h3>
+                <p>
+                  MakeWebP est un outil en ligne permettant de convertir des images en format WebP. Le défi était de créer une <strong className="text-primary">interface utilisateur simple et efficace</strong> tout en assurant des performances de conversion rapides.
+                </p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Stack et compétences utilisées :</h4>
+                <p>Pour ce projet, j'ai utilisé <strong className="text-primary">React, Next.js, Node.js, Express</strong> et intégré des bibliothèques de traitement d'images comme <strong className="text-primary">Sharp</strong>.</p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Résultats et perspectives d'amélioration :</h4>
+                <p>
+                  L'outil a été bien accueilli par les utilisateurs grâce à sa simplicité d'utilisation et ses performances. À l'avenir, d'autres convertisseurs de formats d'images pourraient être ajoutés pour élargir les fonctionnalités.
+                </p>
+              </Container>
+            </Container>
+            <Container className="container mx-auto gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="grid2">
+              <Container className="w-full md:w-9/10 flex flex-col justify-center gap-6" type="col">
+                <h3 className="text-2xl font-bold text-primary uppercase">
+                  Kasa - Application de location
+                </h3>
+                <p>
+                  Kasa est une application de location immobilière qui permet aux utilisateurs de rechercher et de réserver des logements. Le défi était de créer une <strong className="text-primary">interface utilisateur intuitive</strong> tout en gérant efficacement les données des logements.
+                </p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Stack et compétences utilisées :</h4>
+                <p>Pour ce projet, j'ai utilisé <strong className="text-primary">React, React Router, Sass</strong> et mis en place une gestion d'état avec le contexte React.</p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Résultats et perspectives d'amélioration :</h4>
+                <p>
+                  L'application a permis aux utilisateurs de trouver facilement des logements adaptés à leurs besoins. Des fonctionnalités supplémentaires telles qu'un système de paiement intégré pourraient être envisagées...
+                </p>
+              </Container>
+              <Image
+                src={`${siteConfig.basePath}/projet3.webp`}
+                alt="Mockup du projet Kasa"
+                width={600}
+                height={400}
+                className="w-full aspect-[4/3] object-cover rounded-xl"
+              />
+            </Container>
+            <Container className="container mx-auto gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="grid2">
+              <Image
+                src={`${siteConfig.basePath}/projet2.webp`}
+                alt="Mockup du projet Mon Vieux Grimoire."
+                width={600}
+                height={400}
+                className="w-full aspect-[4/3] object-cover rounded-xl"
+              />
+              <Container className="w-full md:w-9/10 flex flex-col justify-center gap-6" type="col">
+                <h3 className="text-2xl font-bold text-primary uppercase">
+                  Mon Vieux Grimoire. - Boutique en ligne
+                </h3>
+                <p>
+                  Mon Vieux Grimoire. est un site de référencement et de notation de livres. Le défi était de créer une <strong className="text-primary">interface utilisateur conviviale</strong> tout en intégrant un système de notation et de commentaires pour les utilisateurs.
+                </p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Stack et compétences utilisées :</h4>
+                <p>Pour ce projet, j'ai utilisé <strong className="text-primary">Express, MongoDB, React</strong> et mis en place une API RESTful pour gérer les données des livres et des utilisateurs.</p>
+                <h4 className="uppercase text-lg underline decoration-primary decoration-2">Résultats et perspectives d'amélioration :</h4>
+                <p>
+                  Le site a permis aux utilisateurs de découvrir et d'évaluer des livres facilement. Des fonctionnalités supplémentaires telles qu'un système de recommandations personnalisées pourraient être envisagées pour améliorer l'expérience utilisateur.
+                </p>
+              </Container>
+            </Container>
           </Container>
         </Section>
         <Section
@@ -248,7 +322,6 @@ export default function Home() {
             />
           </Container>
         </Section>
-
         <Section
           className="w-full"
           id="study-path-section"
@@ -320,7 +393,7 @@ export default function Home() {
             <FAQ faqs={faqs} />
           </Container>
         </Section>
-        <ContactSection sectionId="contact-section" title="Contactez-moi" subtitle="N'hésitez pas à me contacter pour toute question ou projet."/>
+        <ContactSection sectionId="contact-section" title="Contactez-moi" subtitle="N'hésitez pas à me contacter pour toute question ou projet." />
       </main>
     </div>
   );

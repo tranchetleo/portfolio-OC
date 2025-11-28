@@ -40,11 +40,6 @@ export function Meta() {
       price: service.price,
       priceCurrency: service.currency,
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: org.rating.average,
-      reviewCount: org.rating.count,
-    },
     faq: siteConfig.mainFAQ.map((faq) => ({
       "@type": "Question",
       name: faq.question,

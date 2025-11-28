@@ -1,34 +1,34 @@
 export const siteConfig = {
-  name: 'SaniTemplate',
+  name: 'Léo Tranchet',
 
   locale: 'fr-FR',
-  url: 'https://sani-template.dev',
+  url: 'https://leo-tranchet.dev',
   logo: '/logo.webp',
   basePath: '/test', // set to '' if you are not deploying to a subpath
 
-  email: 'contact@saniweb.com',
-  phone: '+33 6 12 34 56 78',
-  address: '123 Rue de l\'Exemple, Paris, France',
+  email: 'leo.tranchet.pro@gmail.com',
+  phone: '+33 6 65 44 45 79',
+  address: '3 Square Saint-Pasquier, 44000 Nantes, France',
 
-  footerText: 'Exemple de pied de page pour un site web moderne, utilisant Next.js et Tailwind CSS.',
+  footerText: 'Léo Tranchet - Développeur Web Indépendant. Je crée des sites vitrines et e-commerce sur mesure. Chaque site web est optimisé pour le référencement et l\'expérience utilisateur. Contactez-moi pour discuter de votre projet !',
 
 
 
   navLinks: [
     { label: 'Accueil',
       href: '/',
-      metaTitle: 'Page d\'accueil',
-      metaDescription: 'Bienvenue sur la page d\'accueil de SaniTemplate',
+      metaTitle: 'Léo Tranchet - Développeur Web Indépendant',
+      metaDescription: 'Découvrez Léo Tranchet, développeur web indépendant basé à Nantes 44000, spécialisé dans la création de sites vitrines et e-commerce.',
       sections: [ // Links to sections on the homepage for single-page navigation
         { href: '/#welcome-section', label: 'Bienvenue' },
         { href: '/#features-section', label: 'Fonctionnalités' },
         { href: '/#contact-section', label: 'Contact' },
       ]
     },
-    { label: 'À propos',
-      href: '/about',
-      metaTitle: 'À propos de SaniTemplate',
-      metaDescription: 'Découvrez SaniTemplate, un template Next.js + Tailwind pour développeurs freelance.'
+    { label: 'Projets',
+      href: '/projets',
+      metaTitle: 'Léo Tranchet - Projets de Développement Web',
+      metaDescription: 'Explorez les projets de Léo Tranchet, développeur web indépendant à Nantes 44000, mettant en avant ses compétences en création de sites vitrines et e-commerce.'
     },
     { label: 'Contact',
       href: '/contact',
@@ -38,22 +38,22 @@ export const siteConfig = {
   ],
 
   company: {
-    legalName: "Sani Web",
-    description: "Sani Web est un développeur web indépendant spécialisé dans la création de sites vitrine et e-commerce.",
-    type: "LocalBusiness", // ou "Organization" ou "Person"
+    legalName: "Léo Tranchet",
+    description: "Léo Tranchet est un développeur web indépendant spécialisé dans la création de sites vitrine et e-commerce.",
+    type: "Person", // ou "Organization" ou "Person"
     businessType: "WebDesign", // pour LocalBusiness
     address: {
-      street: "123 Rue du Code",
-      postalCode: "75000",
-      city: "Paris",
+      street: "3 Square Saint-Pasquier",
+      postalCode: "44000",
+      city: "Nantes",
       country: "FR",
     },
     geo: {
-      lat: 48.8566,
-      lng: 2.3522,
+      lat: 47.1339,
+      lng: -1.3402,
     },
-    phone: "+33 6 12 34 56 78",
-    email: "contact@saniweb.fr",
+    phone: "+33 6 65 44 45 79",
+    email: "leo.tranchet.pro@gmail.com",
     founder: {
       name: "Léo Tranchet",
       jobTitle: "Développeur Web Indépendant",
@@ -61,7 +61,6 @@ export const siteConfig = {
     },
     sameAs: [
       "https://www.linkedin.com/in/leotranchet",
-      "https://twitter.com/saniweb",
     ],
     services: [
       {
@@ -77,39 +76,40 @@ export const siteConfig = {
         currency: "EUR",
       },
     ],
-    rating: {
-      average: 4.8,
-      count: 57,
-    },
   },
 
   mainFAQ: [
     {
-      question: "Qu'est-ce que SaniTemplate ?",
+      question: "Quels types de sites web développez-vous ?",
       answer:
-        "SaniTemplate est un modèle de site web moderne, conçu pour aider les développeurs à créer des sites vitrines et e-commerce rapidement et facilement.",
+        "Je développe principalement des sites vitrines et des sites e-commerce adaptés aux besoins de mes clients. Chaque site est conçu pour être responsive et optimisé pour le référencement. Je porte une attention particulière à l'expérience utilisateur et à la performance.",
     },
     {
-      question: "Comment puis-je utiliser SaniTemplate ?",
+      question: "Quels sont vos tarifs pour la création d'un site web ?",
       answer:
-        "Pour utiliser SaniTemplate, il vous suffit de l'installer via npm ou yarn, puis de l'intégrer dans votre projet Next.js. Consultez la documentation pour des instructions détaillées.",
+        "Mes tarifs varient en fonction de la complexité et des fonctionnalités requises pour le site. En général, un site vitrine commence à partir de 499€, tandis qu'un site e-commerce débute à 999€. Je propose également des forfaits personnalisés en fonction des besoins spécifiques de chaque projet.",
     },
     {
-      question: "Quels sont les avantages de SaniTemplate ?",
+      question: "Combien de temps faut-il pour créer un site web ?",
       answer:
-        "SaniTemplate offre de nombreux avantages, notamment une base de code optimisée, des composants réutilisables et une documentation complète. Il permet également un développement rapide et une personnalisation facile."
+        "Le délai de création d'un site web dépend de la complexité du projet. En moyenne, un site vitrine peut être réalisé en 2 à 4 semaines, tandis qu'un site e-commerce peut prendre entre 4 à 8 semaines. Je m'efforce toujours de respecter les délais convenus avec mes clients.",
     },
+    {
+      question: "Offrez-vous des services de maintenance après la création du site ?",
+      answer:
+        "Oui, je propose des services de maintenance pour assurer que votre site reste à jour, sécurisé et performant. Cela inclut les mises à jour de contenu, les sauvegardes régulières, et la surveillance de la sécurité. Des forfaits de maintenance mensuels ou annuels sont disponibles selon vos besoins.",
+    },
+    {
+      question: "Aidez-vous avec le référencement (SEO) de mon site web ?",
+      answer:
+        "Absolument ! J'intègre les meilleures pratiques SEO lors de la création de votre site web pour améliorer sa visibilité sur les moteurs de recherche. Cela inclut l'optimisation des balises méta, la structure du site, la vitesse de chargement, et plus encore. Je peux également vous conseiller sur des stratégies SEO à long terme.",
+    }
   ],
 
   socialLinks: { // après modification, update les SameAs dans company
-    website: "https://sani-template.dev",
-    twitter: "https://twitter.com/saniweb",
-    instagram: "https://instagram.com/toncompte",
-    facebook: "https://facebook.com/toncompte",
+    website: "https://sani-web.com",
+    instagram: "https://instagram.com/abso.yt",
     linkedin: "https://linkedin.com/in/léo-tranchet",
-    tiktok: "https://www.tiktok.com/@tonprofil",
-    uberEats: "https://www.ubereats.com/store/tonrestaurant",
-    deliveroo: "https://deliveroo.fr/fr/restaurant/tonrestaurant",
   },
 
   legalInfos: {

@@ -1,6 +1,5 @@
 "use client";
 import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
 import { Container } from "@/components/layout/Container";
 import { FeatureItem } from "@/components/ui/FeatureItem";
 import {
@@ -31,6 +30,99 @@ export default function Home() {
   const { trackEvent } = useTracking();
   const path = usePath();
   const screenSize = useScreenSize();
+
+  const sites = [
+    {
+      name: 'HTML5',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/2048px-HTML5_logo_and_wordmark.svg.png',
+    },
+    {
+      name: 'CSS3',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png',
+    },
+    {
+      name: 'JavaScript (ES6+)',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      logo: 'https://iconape.com/wp-content/files/ez/353342/svg/javascript-seeklogo.com.svg',
+    },
+    {
+      name: 'TypeScript',
+      url: 'https://www.typescriptlang.org/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg',
+    },
+    {
+      name: 'React',
+      url: 'https://reactjs.org/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+    },
+    {
+      name: 'Vue.js',
+      url: 'https://vuejs.org/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg',
+    },
+    {
+      name: 'Next.js',
+      url: 'https://nextjs.org/',
+      logo: 'https://logowik.com/content/uploads/images/nextjs2106.logowik.com.webp',
+    },
+    {
+      name: 'Node.js',
+      url: 'https://nodejs.org/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg',
+    },
+    {
+      name: 'Express.js',
+      url: 'https://expressjs.com/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png',
+    },
+    {
+      name: 'NestJS',
+      url: 'https://nestjs.com/',
+      logo: 'https://nestjs.com//logo-small-gradient.0ed287ce.svg',
+    },
+    {
+      name: 'CodeIgniter',
+      url: 'https://codeigniter.com/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/CodeIgniter_Logo.svg/2560px-CodeIgniter_Logo.svg.png',
+    },
+    {
+      name: 'MySQL',
+      url: 'https://www.mysql.com/',
+      logo: 'https://labs.mysql.com/common/logos/mysql-logo.svg?v2',
+    },
+    {
+      name: 'PostgreSQL',
+      url: 'https://www.postgresql.org/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg',
+    },
+    {
+      name: 'SQLite',
+      url: 'https://www.sqlite.org/index.html',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/3/38/SQLite370.svg',
+    },
+    {
+      name: 'Github',
+      url: 'https://github.com/',
+      logo: 'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png',
+    },
+    {
+      name: 'GitLab',
+      url: 'https://gitlab.com/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/GitLab_logo.svg/1200px-GitLab_logo.svg.png',
+    },
+    {
+      name: 'Tailwind CSS',
+      url: 'https://tailwindcss.com/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg',
+    },
+    {
+      name: 'Bootstrap',
+      url: 'https://getbootstrap.com/',
+      logo: 'https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg',
+    }
+  ];
 
   useEffect(() => {
     // Tracker la visite de la page d'accueil
@@ -313,6 +405,44 @@ export default function Home() {
               />
             </Container>
           </Container>
+
+          <div className="relative py-6 w-full overflow-x-hidden">
+            <div
+              className="flex gap-2 md:gap-10 animate-slide"
+              style={{
+                animation: 'slide 40s linear infinite',
+                minWidth: 'fit-content',
+              }}
+            >
+              {sites.concat(sites).map(site => (
+                <Link
+                  key={site.name + Math.random()}
+                  href={site.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center min-w-[100px] hover:scale-105 transition-transform duration-200"
+                >
+                  <img
+                    src={site.logo}
+                    alt={site.name}
+                    className="h-10 w-auto mb-2 object-contain"
+                    loading="lazy"
+                  />
+                </Link>
+              ))}
+            </div>
+            <style jsx>{`
+                        @keyframes slide {
+                            0% {
+                                transform: translateX(0);
+                            }
+                            100% {
+                                transform: translateX(-50%);
+                            }
+                        }
+                    `}</style>
+          </div>
+
           <Container className="container px-4 md:px-0 mt-8" type="row">
             <CallToAction
               title="Vous avez un projet en tête ?"

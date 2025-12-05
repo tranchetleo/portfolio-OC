@@ -58,7 +58,7 @@ export function Navbar(
           <div className="flex items-center justify-between w-full md:w-auto">
             <Link
               href="/"
-              className={`flex items-center gap-2 text-xl font-bold focus:outline-2 ${
+              className={`flex items-center gap-2 text-xl font-bold focus:outline-2 hover:scale-105 transition-transform duration-200 ${
                 invert ? "dark:invert" : ""
               } ${invertReverse ? "invert dark:invert-0" : ""}`}
             >
@@ -113,7 +113,7 @@ export function Navbar(
                 <li key={section.href}>
                   <Link
                     href={section.href}
-                    className="hover:underline focus:outline-2"
+                    className="hover:underline hover:text-primary focus:outline-2 transition-colors duration-200"
                     onClick={() => setOpen(false)}
                   >
                     {section.label}

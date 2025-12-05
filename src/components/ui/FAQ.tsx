@@ -24,7 +24,7 @@ export function FAQ({ faqs }: { faqs: FAQItem[] }) {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-border rounded-lg bg-background shadow-sm transition-all"
+            className="border border-border rounded-lg bg-background shadow-sm transition-all hover:bg-primary/20 duration-300"
           >
             <button
               onClick={() => toggle(index)}

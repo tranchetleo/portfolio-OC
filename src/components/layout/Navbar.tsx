@@ -53,9 +53,9 @@ export function Navbar(
     >
       <nav>
         <div
-          className={`container mx-auto px-4 md:px-0 py-${paddingY} flex flex-col md:flex-row items-center justify-between`}
+          className={`container mx-auto px-4 lg:px-0 py-${paddingY} flex flex-col lg:flex-row items-center justify-between`}
         >
-          <div className="flex items-center justify-between w-full md:w-auto">
+          <div className="flex items-center justify-between w-full lg:w-auto">
             <Link
               href="/"
               className={`flex items-center gap-2 text-xl font-bold focus:outline-2 hover:scale-105 transition-transform duration-200 ${
@@ -77,7 +77,7 @@ export function Navbar(
               {name && <span>{siteConfig.name}</span>}
             </Link>
             <button
-              className="md:hidden focus:outline-2 w-8 h-8 flex flex-col justify-center items-center relative"
+              className="lg:hidden focus:outline-2 w-8 h-8 flex flex-col justify-center items-center relative"
               onClick={() => setOpen(!open)}
               aria-label={open ? "Close menu" : "Open menu"}
             >
@@ -99,9 +99,9 @@ export function Navbar(
             </button>
           </div>
           <ul
-            className={`flex flex-col font-bold md:flex-row px-2 gap-4 md:gap-10 overflow-hidden transition-all duration-500 text-center ${
+            className={`flex flex-col font-bold lg:flex-row px-2 gap-4 lg:gap-10 overflow-hidden transition-all duration-500 text-center ${
               open ? "max-h-100 pt-4 w-full" : "max-h-0"
-            } md:mt-0 md:flex md:max-h-none md:pt-0 md:w-auto md:text-left`}
+            } lg:mt-0 lg:flex lg:max-h-none lg:pt-0 lg:w-auto lg:text-left`}
             style={{
               transitionProperty: "max-height, padding-top",
             }}

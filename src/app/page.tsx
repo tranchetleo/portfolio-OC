@@ -79,7 +79,7 @@ export default function Home() {
                 Avec une expertise en <strong className="text-primary">développement front-end et back-end</strong>, j'accompagne les entreprises et les entrepreneurs dans la création de sites web et d'applications performantes, optimisées pour le référencement et l'expérience utilisateur.
               </p>
             </Container>
-            <Container className="w-full flex justify-center" type="col">
+            <Container className="w-full md:w-3/4 flex justify-center" type="col">
               <Container
                 className="w-full justify-end gap-8 md:my-0"
                 type="row"
@@ -149,7 +149,7 @@ export default function Home() {
             <p className="text-center text-lg mb-6">
               Découvrez quelques-unes de mes réalisations récentes.
             </p>
-            <Container className="container mx-auto gap-2 md:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="row">
+            <Container className="container mx-auto gap-2 lg:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10 flex flex-col lg:flex-row justify-between">
               <Image
                 src={`${siteConfig.basePath}/projet1.webp`}
                 alt="Mockup du projet Home'plans"
@@ -172,7 +172,7 @@ export default function Home() {
                 </p>
               </Container>
             </Container>
-            <Container className="container mx-auto gap-2 md:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10 md:flex-row-reverse" type="row">
+            <Container className="container mx-auto gap-2 lg:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10 flex flex-col lg:flex-row-reverse justify-between">
               <Image
                 src={`${siteConfig.basePath}/projet4.webp`}
                 alt="Mockup du projet Glassy Skin Care"
@@ -195,7 +195,7 @@ export default function Home() {
                 </p>
               </Container>
             </Container>
-            <Container className="container mx-auto gap-2 md:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="row">
+            <Container className="container mx-auto gap-2 lg:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10 flex flex-col lg:flex-row justify-between">
               <Image
                 src={`${siteConfig.basePath}/projet5.webp`}
                 alt="Mockup du projet MakeWebP"
@@ -218,7 +218,7 @@ export default function Home() {
                 </p>
               </Container>
             </Container>
-            <Container className="container mx-auto gap-2 md:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10 md:flex-row-reverse" type="row">
+            <Container className="container mx-auto gap-2 lg:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10 flex flex-col lg:flex-row-reverse justify-between">
               <Image
                 src={`${siteConfig.basePath}/projet3.webp`}
                 alt="Mockup du projet Kasa"
@@ -241,7 +241,7 @@ export default function Home() {
                 </p>
               </Container>
             </Container>
-            <Container className="container mx-auto gap-2 md:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10" type="row">
+            <Container className="container mx-auto gap-2 md:gap-6 bg-background p-6 rounded-2xl shadow-md shadow-primary/10 flex flex-col lg:flex-row justify-between">
               <Image
                 src={`${siteConfig.basePath}/projet2.webp`}
                 alt="Mockup du projet Mon Vieux Grimoire."
@@ -336,7 +336,7 @@ export default function Home() {
             <p className="text-center text-lg mb-6">
               Découvrez mon parcours académique et professionnel qui m'a conduit à devenir un développeur web passionné et compétent.
             </p>
-            <ul className="grid gap-4 md:grid-cols-4">
+            <ul className="grid gap-4 lg:grid-cols-4">
               <li className="bg-background rounded-xl p-4 shadow-md shadow-primary/10">
                 <Image
                   src={`${siteConfig.basePath}/lycee-nicolas-appert.webp`}
@@ -392,7 +392,7 @@ export default function Home() {
           className="w-full"
           id="faq-section"
         >
-          <Container className="container px-4 md:px-0 md:!w-1/2" type="col">
+          <Container className="container px-4 jg:px-0 lg:!w-1/2" type="col">
             <FAQ faqs={faqs} />
           </Container>
         </Section>
